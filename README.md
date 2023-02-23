@@ -9,7 +9,7 @@ This uses both a **Twilio Flex Plugin** and a **Twilio Serverless Function** to 
 - `agent`
 - `disconnect` (agent disconnected)
 
-Example Flex Insights report:
+Example Flex Insights report:  
 ![image](https://user-images.githubusercontent.com/67924770/220817994-9fc472c0-16c4-47d0-bb10-cbe3041bba71.png)
 
 
