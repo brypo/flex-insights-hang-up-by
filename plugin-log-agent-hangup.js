@@ -35,10 +35,8 @@ export default class LogAgentHangupPlugin extends FlexPlugin {
 
             // update the task attributes with new attribute JSON
             try {
-                let updatedTask = await payload.task.source.setAttributes(updatedAttributes)
-                if (updatedTask) {
-                    console.log(`${taskSid} updated with "agent" hang_up_by attribute`);
-                }
+                console.log(`${taskSid} updating with "agent" hang_up_by attribute`);
+                await payload.task.source.setAttributes(updatedAttributes)
             }
             catch(e) {
                 console.error(`Error updating ${taskSid} with "agent" hang_up_by: ${e}`)
