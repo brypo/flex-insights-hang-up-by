@@ -27,7 +27,7 @@ To get started, follow these instructions to [set up a sample Flex plugin](https
 
 ## Serverless Function
 
-A Serverless Function is used to handle process the back-end TaskRouter Events. Once you've [deployed your Function](https://www.twilio.com/docs/labs/serverless-toolkit/deploying), update the Workspace Callback Event URL with this Function URL.
+A Serverless Function is used to process the back-end TaskRouter Events. Once you've [deployed your Function](https://www.twilio.com/docs/labs/serverless-toolkit/deploying), update the Workspace Callback Event URL with this Function URL.
 
 ### Environment Variables
 
