@@ -34,3 +34,7 @@ A Serverless Function is used to handle process the back-end TaskRouter Events. 
 | Variable | Example Identifier |
 | ----- | ---- |
 | WORKSPACE_SID | WSxxxxxxxxxx
+
+
+## Disclaimer
+This software is to be considered "sample code", a Type B Deliverable, and is delivered "as-is" to the user. Twilio bears no responsibility to support the use or implementation of this software.
