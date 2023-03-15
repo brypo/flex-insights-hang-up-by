@@ -1,6 +1,6 @@
 # Flex Solution - Add "Hang Up By" to Flex Insights
 
-This is a minimal Twilio Flex solution to identify who ended a *voice* Task and [populate that data to Flex Insights](https://www.twilio.com/docs/flex/developer/insights/enhance-integration).
+This is a minimal Twilio Flex proof of concept to identify who ended a *voice* Task and [populate that data to Flex Insights](https://www.twilio.com/docs/flex/developer/insights/enhance-integration).
 
 This uses both a **Twilio Flex Plugin** and a **Twilio Serverless Function** to determine who ended the Voice interaction.
 
