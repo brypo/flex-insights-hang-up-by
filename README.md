@@ -35,6 +35,8 @@ A Serverless Function is used to process the back-end TaskRouter Events. Once yo
 | ----- | ---- |
 | WORKSPACE_SID | WSxxxxxxxxxx
 
+## Consideration
+This solution does not take into account "external" transfers. If you are making use of Twilio's native external warm transfer feature, this code will need to be adjusted to log when the "external" party ends the conference.
 
 ## Disclaimer
 This software is to be considered "sample code", a Type B Deliverable, and is delivered "as-is" to the user. Twilio bears no responsibility to support the use or implementation of this software.
