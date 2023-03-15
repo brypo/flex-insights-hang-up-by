@@ -25,6 +25,9 @@ The code provided is intended to be incorporated into standard plugin architectu
 
 To get started, follow these instructions to [set up a sample Flex plugin](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#set-up-a-sample-flex-plugin), navigate to the [main part](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#build-your-flex-plugin) of your plugin, and replace the `src/SamplePlugin.js` code with what's provided in the above *plugin* file.
 
+NOTE: You may need to make some tweaks to this file depending on what Flex UI version your plugin is using (v1 or v2). 
+
+
 ## Serverless Function
 
 A Serverless Function is used to process the back-end TaskRouter Events. Once you've [deployed your Function](https://www.twilio.com/docs/labs/serverless-toolkit/deploying), update the Workspace Callback Event URL with this Function URL.
