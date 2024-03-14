@@ -1,5 +1,9 @@
 # Flex Solution - Add "Hang Up By" to Flex Insights
 
+>[!TIP]
+>For a more featureful solution, consider the [Twilio's Flex Project Template - Hang Up By](https://twilio-professional-services.github.io/flex-project-template/feature-library/hang-up-by) implementation.
+
+
 This is a minimal Twilio Flex proof of concept to identify who ended a *voice* Task and [populate that data to Flex Insights](https://www.twilio.com/docs/flex/developer/insights/enhance-integration).
 
 This uses both a **Twilio Flex Plugin** and a **Twilio Serverless Function** to determine who ended the Voice interaction.
@@ -17,15 +21,13 @@ Example Flex Insights report:
 
 On the **front-end**, we use a [Flex Plugin](https://www.twilio.com/docs/flex/developer/ui-and-plugins) to add a listener for the ["HangupCall" Action](https://www.twilio.com/docs/flex/developer/ui/v1/actions). This captures when the Agent intentionally invokes the hangup and populates the ["Hang Up By" metric](https://www.twilio.com/docs/flex/end-user-guide/insights/data-model#conversations:~:text=Y-,Hang%20Up%20By,-The%20party%20that) with `agent`.
 
-On the **back-end**, we use the [TaskRouter Workspace Callback Event URL](https://www.twilio.com/docs/taskrouter/api/event/reference#:~:text=TaskRouter%20will%20make,Event%20takes%20place.) and point it to a [Twilio Serverless Function](https://www.twilio.com/docs/serverless/functions-assets/functions). This Function listens for the `task.wrapup` event from TaskRouter, and if this is a "voice" Task, it will check to see who ended the Conference and update Flex Insights with either `customer` or `disconnect`.
+On the **back-end**, we use the [TaskRouter Workspace Callback Event URL](https://www.twilio.com/docs/taskrouter/api/event/reference#:~:text=TaskRouter%20will%20make,Event%20takes%20place.) and point it to a [Twilio Serverless Function](https://www.twilio.com/docs/serverless/functions-assets/functions). This Function listens for the `task.wrapup` event from TaskRouter, and if it is a "voice" Task, it will check to see who ended the Conference and update Flex Insights with either `customer` or `disconnect`.
 
 ## Flex Plugin
 
-The code provided is intended to be incorporated into standard plugin architecture.
+The code provided is intended to be incorporated into standard Flex Plugin architecture.
 
-To get started, follow these instructions to [set up a sample Flex plugin](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#set-up-a-sample-flex-plugin), navigate to the [main part](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#build-your-flex-plugin) of your plugin, and replace the `src/SamplePlugin.js` code with what's provided in the above *plugin* file.
-
-NOTE: You may need to make some tweaks to this file depending on what Flex UI version your plugin is using (v1 or v2). 
+If you are new to Flex Plugins, follow these instructions to [set up a sample Flex plugin](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#set-up-a-sample-flex-plugin), navigate to the [init method](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#build-your-flex-plugin) of your plugin, and add the [sample code provided](https://github.com/brypo/flex-insights-hang-up-by/blob/main/plugin-log-agent-hangup.js). 
 
 
 ## Serverless Function
@@ -37,6 +39,7 @@ A Serverless Function is used to process the back-end TaskRouter Events. Once yo
 | Variable | Example Identifier |
 | ----- | ---- |
 | WORKSPACE_SID | WSxxxxxxxxxx
+
 
 ## Consideration
 This solution does not take into account "external" transfers. If you are making use of Twilio's native external warm transfer feature, this code will need to be adjusted to log when the "external" party ends the conference.
