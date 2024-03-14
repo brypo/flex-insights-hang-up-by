@@ -27,7 +27,7 @@ On the **back-end**, we use the [TaskRouter Workspace Callback Event URL](https:
 
 The code provided is intended to be incorporated into standard Flex Plugin architecture.
 
-If you are new to Flex Plugins, follow these instructions to [set up a sample Flex plugin](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#set-up-a-sample-flex-plugin), navigate to the [init method](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#build-your-flex-plugin) of your plugin, and add the [sample code provided](https://github.com/brypo/flex-insights-hang-up-by/blob/main/plugin-log-agent-hangup.js). 
+If you are new to Flex Plugins, follow these instructions to [set up a sample Flex plugin](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#set-up-a-sample-flex-plugin), navigate to the [`init` method](https://www.twilio.com/docs/flex/quickstart/getting-started-plugin#build-your-flex-plugin) of your plugin, and add the [sample code provided](https://github.com/brypo/flex-insights-hang-up-by/blob/main/plugin-log-agent-hangup.js). 
 
 
 ## Serverless Function
